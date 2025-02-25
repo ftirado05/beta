@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartEnegry</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    .container {
+      max-width: 375px;
+      margin: 0 auto;
+      background-color: #fff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #333;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 12px; /* Reducimos el tamaño de la fuente */
+      padding: 8px 5px; /* Reducimos el padding */
+      border-radius: 5px;
+      transition: background-color 0.3s, transform 0.2s;
+      flex: 1;
+      text-align: center;
+      margin: 0 2px; /* Espaciado entre botones */
+    }
+
+    nav a:hover {
+      background-color: #4CAF50;
+      transform: translateY(-2px);
+    }
+
+    .content {
+      padding: 20px;
+      flex-grow: 1;
+    }
+
+    h2 {
+      color: #4CAF50;
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      transition: background-color 0.3s, transform 0.2s;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+      transform: translateY(-2px);
+    }
+
+    .alert {
+      background-color: #ffeb3b;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .user-profile {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .user-profile img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .user-profile p {
+      margin: 0;
+      font-size: 16px;
+      font-weight: bold;
+      color: #4CAF50;
+    }
+
+    footer{
+        padding: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>SmartEnegry</h1>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+      <a href="#dashboard">Inicio</a>
+      <a href="#dispositivos">Dispositivos</a>
+      <a href="#recomendaciones">Recomendaciones</a>
+      <a href="#informes">Informes</a>
+      <a href="#notificacion">Notificaciones</a>
+    </nav>
+
+    <!-- Contenido -->
+    <div class="content" id="dashboard">
+      <h2>Inicio</h2>
+      <div class="user-profile">
+        <img src="./User.png" alt="Usuario">
+        <p>Bienvenido, Usuario</p>
+      </div>
+      <div class="card">
+        <p>Consumo actual: <strong>15 kWh</strong></p>
+        <div class="alert">¡Alerta! Consumo excesivo detectado.</div>
+        <button class="button">Ver Dispositivos</button>
+      </div>
+    </div>
+
+    <div class="content" id="dispositivos" style="display: none;">
+      <h2>Dispositivos</h2>
+      <div class="card">
+        <p><strong>Luz Sala</strong> - Encendido</p>
+        <button class="button">Apagar</button>
+      </div>
+      <div class="card">
+        <p><strong>Aire Acondicionado</strong> - Apagado</p>
+        <button class="button">Encender</button>
+      </div>
+    </div>
+
+    <div class="content" id="recomendaciones" style="display: none;">
+      <h2>Recomendaciones</h2>
+      <div class="card">
+        <p><strong>Apagar luces en habitaciones vacías</strong></p>
+        <p>Ahorro estimado: 2 kWh</p>
+        <button class="button">Aplicar</button>
+      </div>
+      <div class="card">
+        <p><strong>Reducir uso de aire acondicionado</strong></p>
+        <p>Ahorro estimado: 5 kWh</p>
+        <button class="button">Aplicar</button>
+      </div>
+    </div>
+
+    <div class="content" id="informes" style="display: none;">
+      <h2>Informes</h2>
+      <div class="card">
+        <p>Informes de consumo mensual.</p>
+        <button class="button">Descargar Informe</button>
+      </div>
+    </div>
+
+    <div class="content" id="notificacion" style="display: none;">
+      <h2>Notificaciones</h2>
+      <div class="card">
+        <p><strong>Mensajes y Alertas</strong></p>
+        <button class="button">Ver Mensajes</button>
+      </div>
+    </div>
+    <footer class="center">
+        <p>&copy; 2025 Developer Fabian TG</p>
+    </footer>
+  </div>
+
+  <!-- Script para manejar la navegación -->
+  <script>
+    const links = document.querySelectorAll('nav a');
+    const contents = document.querySelectorAll('.content');
+
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = link.getAttribute('href').substring(1);
+
+        // Oculta todos los contenidos
+        contents.forEach(content => {
+          content.style.display = 'none';
+        });
+
+        // Muestra el contenido seleccionado
+        document.getElementById(target).style.display = 'block';
+      });
+    });
+
+    // Mostrar el contenido inicial (Dashboard)
+    document.getElementById('dashboard').style.display = 'block';
+  </script>
+</body>
+</html>
