@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión - SmartEnergy</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Enlaza el archivo CSS -->
+  <script src="//code.tidio.co/r6wzcjsrdfj2eljthqlnxxi6zcscio2q.js" async></script>
+</head>
+<body>
+  <div class="contenedor">
+    <!-- Formulario de Inicio de Sesión -->
+    <div id="loginForm">
+      <h2>Iniciar Sesión</h2>
+      <input type="text" id="loginUsername" placeholder="Nombre de usuario">
+      <input type="password" id="loginPassword" placeholder="Contraseña">
+      <button class="button" onclick="login()">Iniciar Sesión</button>
+      <div class="login-register-links">
+        <a href="#" onclick="showRegisterForm()">¿No tienes cuenta? Regístrate</a>
+      </div>
+    </div>
+
+    <!-- Formulario de Registro -->
+    <div id="registerForm" style="display: none;">
+      <h2>Registrarse</h2>
+      <input type="text" id="registerUsername" placeholder="Nombre de usuario">
+      <input type="password" id="registerPassword" placeholder="Contraseña">
+      <button class="button" onclick="register()">Registrarse</button>
+      <div class="login-register-links">
+        <a href="#" onclick="showLoginForm()">¿Ya tienes cuenta? Inicia Sesión</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script> <!-- Enlaza el archivo JavaScript -->
+</body>
+</html>
