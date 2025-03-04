@@ -5,11 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="./icono2.ico">
   <title>SmartEnergy</title>
   <link rel="stylesheet" href="styles.css"> <!-- Enlaza el archivo CSS -->
 </head>
 <script src="//code.tidio.co/r6wzcjsrdfj2eljthqlnxxi6zcscio2q.js" async></script>
 <body>
+  <a href="./Manual/MANUAL_SMARTENERGY.pdf" class="floating-icon" target="_blank" style="background-color: #4CAF50;">
+    <i class="fa-solid fa-circle-info"></i>
+  </a>
+
+
+
   <div class="container">
     <!-- Header -->
     <header>
@@ -26,14 +33,14 @@
       <a href="#dispositivos">Dispositivos</a>
       <a href="#recomendaciones">Recomendaciones</a>
       <a href="#informes">Informes</a>
-      <a href="#notificacion">Notificaciones</a>
+      <a href="#notificacion">Alertas</a>
     </nav>
 
     <!-- Contenido -->
     <div class="content" id="dashboard">
       <h2>Inicio</h2>
       <div class="user-profile">
-        <img src="./smartenergylogo__.png" alt="">
+        <img src="./user_hello.png" alt="user_hello">
         <p>Bienvenido, <span id="username">Usuario</span></p>
       </div>
       <div class="card">
@@ -41,10 +48,10 @@
         <!-- Gráfico de barras simulado -->
         <div class="vertical-bar-chart">
           <div class="bar" style="height: 20%; background-color: #4CAF50;">LUN</div>
-          <div class="bar" style="height: 50%; background-color: #217cf3;">MART</div>
+          <div class="bar" style="height: 50%; background-color: #fab40d;">MART</div>
           <div class="bar" style="height: 30%; background-color: #4CAF50;">MIE</div>
-          <div class="bar" style="height: 45%; background-color: #f3d421;">JUE</div>
-          <div class="bar" style="height: 50%; background-color: #217cf3;">VIE</div>
+          <div class="bar" style="height: 40%; background-color: #ffee00;">JUE</div>
+          <div class="bar" style="height: 50%; background-color: #fab40d;">VIE</div>
           <div class="bar" style="height: 100%; background-color: #f32121;">SAB</div>
           <div class="bar" style="height: 75%; background-color: #f32121;">DOM</div>
         </div>
@@ -55,9 +62,9 @@
         <strong>Significado de colores</strong>
         <div class="card">
           <p><i class="fa-solid fa-circle" style="color: #4CAF50;"></i> Bajo</p>
-          <p><i class="fa-solid fa-circle" style="color: #217cf3;"></i> Neutro</p>
-          <p><i class="fa-solid fa-circle" style="color: #f3d421;"></i> Medio</p>
-          <p><i class="fa-solid fa-circle" style="color: #f32121;"></i> Alerta</p>
+          <p><i class="fa-solid fa-circle" style="color: #fab40d;"></i> Alto</p>
+          <p><i class="fa-solid fa-circle" style="color: #ffee00;"></i> Moderado</p>
+          <p><i class="fa-solid fa-circle" style="color: #f32121;"></i> Crítico</p>
           
         </div>
       </div>
@@ -75,7 +82,7 @@
         <button class="button">Encender</button>
       </div>
       <div class="card">
-        <p><strong>Luz Cocina</strong> - Encendido</p>
+        <p><strong>Aire Acondicionado</strong> - Encendido <i class="fa-solid fa-circle-exclamation" style="color: #f32121;"></i></p>
         <button class="button">Apagar</button>
       </div>
       <div class="card">
@@ -83,12 +90,12 @@
         <button class="button">Encender</button>
       </div>
       <div class="card">
-        <p><strong>Ventilador</strong> - Apagada</p>
-        <button class="button">Encender</button>
+        <p><strong>Ventilador</strong> - Encendido <i class="fa-solid fa-circle-exclamation" style="color: #f32121;"></i></p>
+        <button class="button">Apagar</button>
       </div>
       <div class="card">
-        <p><strong>Aire Acondicionado</strong> - Encendido <i class="fa-solid fa-circle-exclamation" style="color: #f32121;"></i></p>
-        <button class="button">Apagar</button>
+        <p><strong>Luz Cocina</strong> - Apagada</p>
+        <button class="button">Encender</button>
       </div>
       <div class="card">
         <p><i class="fa-solid fa-circle-plus"></i> - Dispositivo</p>
@@ -118,14 +125,14 @@
     <div class="content" id="informes" style="display: none;">
       <h2>Informes</h2>
       <div class="card">
-        <p>Informes de consumo mensual.</p>
+        <p>Informe de consumo mensual.</p>
         <!-- Gráfico lineal simulado -->
         <div class="vertical-bar-chart">
           <div class="bar" style="height: 20%; background-color: #4CAF50;">LUN</div>
-          <div class="bar" style="height: 50%; background-color: #217cf3;">MART</div>
+          <div class="bar" style="height: 50%; background-color: #fab40d;">MART</div>
           <div class="bar" style="height: 30%; background-color: #4CAF50;">MIE</div>
-          <div class="bar" style="height: 45%; background-color: #f3d421;">JUE</div>
-          <div class="bar" style="height: 50%; background-color: #217cf3;">VIE</div>
+          <div class="bar" style="height: 40%; background-color: #ffee00;">JUE</div>
+          <div class="bar" style="height: 50%; background-color: #fab40d;">VIE</div>
           <div class="bar" style="height: 100%; background-color: #f32121;">SAB</div>
           <div class="bar" style="height: 75%; background-color: #f32121;">DOM</div>
         </div>
@@ -138,6 +145,9 @@
       <h2>Notificaciones</h2>
       <div class="card">
         <p><strong>Mensajes y Alertas</strong></p>
+        <p><i class="fa-regular fa-bell" style="color: #fab40d;"></i> Consumo de energía este fin de semana. ¡Toma medidas para ahorrar!</p>
+        <p><i class="fa-regular fa-bell" style="color: #fab40d;"></i> Tu consumo energético es alto. Considera apagar dispositivos innecesarios.</p>
+        <p><i class="fa-regular fa-bell" style="color: #f32121;"></i> <strong>¡Atención!</strong>  Tu consumo ha superado el nivel recomendado. Consulta recomendaciones.</p>
         <button class="button">Ver Mensajes</button>
       </div>
     </div>

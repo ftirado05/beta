@@ -10,6 +10,11 @@ function navigateToSection(sectionId) {
   document.getElementById(sectionId).style.display = 'block';
 }
 
+// Manual de intrucciones
+document.addEventListener("DOMContentLoaded", function () {
+  const icon = document.querySelector(".floating-icon");
+  icon.setAttribute("title", "Ayuda");
+});
 
 // Mostrar el contenido inicial (Dashboard)
 document.getElementById('dashboard').style.display = 'block';

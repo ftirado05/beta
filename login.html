@@ -5,13 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Iniciar Sesión - SmartEnergy</title>
   <link rel="stylesheet" href="styles.css"> <!-- Enlaza el archivo CSS -->
-  <script src="//code.tidio.co/r6wzcjsrdfj2eljthqlnxxi6zcscio2q.js" async></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="./icono2.ico">
+<script src="//code.tidio.co/r6wzcjsrdfj2eljthqlnxxi6zcscio2q.js" async></script>
 </head>
 <body>
+  <a href="./Manual/MANUAL_SMARTENERGY.pdf" class="floating-icon" target="_blank" style="background-color: #4CAF50;">
+    <i class="fa-solid fa-circle-info" style="color: #ffff;"></i>
+  </a>
   <div class="contenedor">
     <!-- Formulario de Inicio de Sesión -->
     <div id="loginForm">
-      <h2>Iniciar Sesión</h2>
+      <h2><img src="./smartenergylogo__.png" alt="logosmartenergy" style="height: 180px;"></h2>
       <input type="text" id="loginUsername" placeholder="Nombre de usuario">
       <input type="password" id="loginPassword" placeholder="Contraseña">
       <button class="button" onclick="login()">Iniciar Sesión</button>
